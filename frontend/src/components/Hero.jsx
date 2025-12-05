@@ -12,11 +12,34 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-100">
-      {/* Decorative Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-red-400/10 rounded-full blur-3xl" />
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background - Video for Mobile, Image for Desktop */}
+      <div className="absolute inset-0">
+        {/* Mobile Video Background */}
+        <div className="lg:hidden absolute inset-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="https://customer-assets.emergentagent.com/job_pdf-landing-pro/artifacts/j0nzdret_WhatsApp%20Video%202025-12-05%20at%2010.08.30%20AM.mp4" type="video/mp4" />
+          </video>
+          {/* Dark overlay for mobile video */}
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
+
+        {/* Desktop Image Background */}
+        <div className="hidden lg:block absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1519662978799-2f05096d3636?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzY0ODM1Njc2fDA&ixlib=rb-4.1.0&q=85"
+            alt="Luxury Architecture"
+            className="w-full h-full object-cover"
+          />
+          {/* Gradient overlay for desktop image */}
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-slate-800/60 to-slate-900/70" />
+        </div>
       </div>
 
       <div className="container mx-auto px-4 py-32 relative z-10">
