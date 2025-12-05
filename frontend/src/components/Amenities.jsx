@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { Dumbbell, Trees, Users, Check } from 'lucide-react';
+import { Dumbbell, Trees, Users, Check, Waves } from 'lucide-react';
 import { projectData } from '../utils/mockData';
 
 const Amenities = () => {
