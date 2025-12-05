@@ -106,20 +106,29 @@ const Amenities = () => {
           </Tabs>
         </div>
 
-        {/* Highlight Card */}
+        {/* Highlight Card with Image */}
         <div className="max-w-5xl mx-auto mt-12">
-          <Card className="border-0 shadow-xl bg-gradient-to-r from-slate-900 to-slate-800 text-white">
-            <CardContent className="p-8 md:p-12">
-              <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
-                <div className="flex-1">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-3">Club Privé Experience</h3>
-                  <p className="text-slate-300 text-lg">
-                    An all-weather, temperature-controlled swimming pool enclosed in elegant glass, offering year-round luxury & comfort.
-                  </p>
-                </div>
-                <Waves className="h-20 w-20 text-blue-400 opacity-50" />
+          <Card className="border-0 shadow-xl overflow-hidden">
+            <div className="relative h-96">
+              <img 
+                src="https://images.unsplash.com/photo-1580041065738-e72023775cdc?w=1200&q=80" 
+                alt="Temperature Controlled Pool"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/70 flex items-center">
+                <CardContent className="p-8 md:p-12 relative z-10">
+                  <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 text-white">
+                    <div className="flex-1">
+                      <h3 className="text-2xl md:text-3xl font-bold mb-3">Club Privé Experience</h3>
+                      <p className="text-white/90 text-lg">
+                        An all-weather, temperature-controlled swimming pool enclosed in elegant glass, offering year-round luxury & comfort.
+                      </p>
+                    </div>
+                    <Waves className="h-20 w-20 text-blue-400 opacity-70" />
+                  </div>
+                </CardContent>
               </div>
-            </CardContent>
+            </div>
           </Card>
         </div>
       </div>
