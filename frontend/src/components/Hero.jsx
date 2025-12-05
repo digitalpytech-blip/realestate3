@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from './ui/button';
 import { ArrowRight, MapPin } from 'lucide-react';
 import { projectData } from '../utils/mockData';
+import HeroSlider from './HeroSlider';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -13,7 +14,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background - Video for Mobile, Image for Desktop */}
+      {/* Background - Video for Mobile, Slider for Desktop */}
       <div className="absolute inset-0">
         {/* Mobile Video Background */}
         <div className="lg:hidden absolute inset-0">
@@ -30,16 +31,8 @@ const Hero = () => {
           <div className="absolute inset-0 bg-black/40" />
         </div>
 
-        {/* Desktop Image Background */}
-        <div className="hidden lg:block absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1519662978799-2f05096d3636?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzY0ODM1Njc2fDA&ixlib=rb-4.1.0&q=85"
-            alt="Luxury Architecture"
-            className="w-full h-full object-cover"
-          />
-          {/* Gradient overlay for desktop image */}
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-slate-800/60 to-slate-900/70" />
-        </div>
+        {/* Desktop Image Slider */}
+        <HeroSlider />
       </div>
 
       <div className="container mx-auto px-4 py-32 relative z-10">
