@@ -75,29 +75,64 @@ const FloorPlans = () => {
           ))}
         </div>
 
-        {/* Specifications */}
+        {/* Specifications with Images */}
         <div className="max-w-6xl mx-auto">
-          <Card className="border-0 shadow-xl">
-            <CardHeader className="bg-gradient-to-r from-slate-50 to-blue-50/50 p-8">
-              <CardTitle className="text-3xl font-bold text-slate-900 flex items-center space-x-3">
-                <Maximize className="h-8 w-8" />
-                <span>Premium Specifications</span>
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {projectData.specifications.map((spec, index) => (
-                  <div
-                    key={index}
-                    className="flex items-start space-x-3 p-4 rounded-lg hover:bg-slate-50 transition-colors"
-                  >
-                    <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-1" />
-                    <span className="text-slate-700 leading-relaxed">{spec}</span>
-                  </div>
-                ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Specifications List */}
+            <Card className="border-0 shadow-xl">
+              <CardHeader className="bg-gradient-to-r from-slate-50 to-blue-50/50 p-8">
+                <CardTitle className="text-3xl font-bold text-slate-900 flex items-center space-x-3">
+                  <Maximize className="h-8 w-8" />
+                  <span>Premium Specifications</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-8">
+                <div className="space-y-4">
+                  {projectData.specifications.map((spec, index) => (
+                    <div
+                      key={index}
+                      className="flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-50 transition-colors"
+                    >
+                      <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-1" />
+                      <span className="text-slate-700 leading-relaxed">{spec}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Interior Images Grid */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative overflow-hidden rounded-2xl shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80" 
+                  alt="Luxury Living Room"
+                  className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
+                />
               </div>
-            </CardContent>
-          </Card>
+              <div className="relative overflow-hidden rounded-2xl shadow-lg">
+                <img 
+                  src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?w=600&q=80" 
+                  alt="Master Bedroom"
+                  className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="relative overflow-hidden rounded-2xl shadow-lg">
+                <img 
+                  src="https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?w=600&q=80" 
+                  alt="Modern Kitchen"
+                  className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="relative overflow-hidden rounded-2xl shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1524549207884-e7d1130ae2f3?w=600&q=80" 
+                  alt="Balcony Setup"
+                  className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
