@@ -58,21 +58,40 @@ const Features = () => {
           })}
         </div>
 
-        {/* Additional Highlights */}
-        <div className="mt-20 max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-slate-50 to-blue-50/50 rounded-3xl p-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-slate-900">Premium Construction</h3>
-                <p className="text-slate-600">
-                  Built with advanced Mivan technology ensuring superior strength, faster construction, and flawless finishing.
-                </p>
+        {/* Additional Highlights with Images */}
+        <div className="mt-20 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Premium Construction */}
+            <div className="relative overflow-hidden rounded-3xl shadow-xl group">
+              <img 
+                src="https://images.unsplash.com/photo-1686056040370-b5e5c06c4273?w=800&q=80" 
+                alt="Premium Interior"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent flex items-end">
+                <div className="p-8 text-white">
+                  <h3 className="text-2xl font-bold mb-3">Premium Construction</h3>
+                  <p className="text-white/90">
+                    Built with advanced Mivan technology ensuring superior strength, faster construction, and flawless finishing.
+                  </p>
+                </div>
               </div>
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-slate-900">Natural Serenity</h3>
-                <p className="text-slate-600">
-                  A gently rippling stream connects nature and luxury throughout the project, creating a peaceful ambiance.
-                </p>
+            </div>
+
+            {/* Natural Serenity */}
+            <div className="relative overflow-hidden rounded-3xl shadow-xl group">
+              <img 
+                src="https://images.unsplash.com/photo-1563714193017-5a5fb60bc02b?w=800&q=80" 
+                alt="Garden Landscape"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent flex items-end">
+                <div className="p-8 text-white">
+                  <h3 className="text-2xl font-bold mb-3">Natural Serenity</h3>
+                  <p className="text-white/90">
+                    A gently rippling stream connects nature and luxury throughout the project, creating a peaceful ambiance.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
