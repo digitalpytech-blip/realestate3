@@ -45,11 +45,16 @@ const Location = () => {
           ))}
         </div>
 
-        {/* Map Section */}
+        {/* Map Section with Image */}
         <div className="max-w-6xl mx-auto">
           <Card className="border-0 shadow-xl overflow-hidden">
-            <CardContent className="p-0">
-              <div className="bg-gradient-to-r from-slate-100 to-blue-50 p-12 md:p-16">
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1560448205-d82bf18b9bcf?w=1200&q=80" 
+                alt="City View"
+                className="w-full h-full object-cover absolute inset-0"
+              />
+              <div className="relative bg-gradient-to-r from-white/95 to-white/85 backdrop-blur-sm p-12 md:p-16">
                 <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 md:space-x-8">
                   <div className="flex-1">
                     <h3 className="text-3xl font-bold text-slate-900 mb-4">
@@ -82,14 +87,18 @@ const Location = () => {
                     </ul>
                   </div>
                   <div className="flex-shrink-0">
-                    <div className="w-64 h-64 rounded-2xl bg-white shadow-lg flex items-center justify-center">
-                      <MapPin className="h-24 w-24 text-slate-300" />
+                    <div className="w-64 h-64 rounded-2xl overflow-hidden shadow-lg">
+                      <img 
+                        src="https://images.unsplash.com/photo-1616593969747-4797dc75033e?w=400&q=80" 
+                        alt="Balcony View"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </CardContent>
         </div>
 
         {/* Address */}
