@@ -5,7 +5,7 @@ const amenities = [
   { title: 'Swimming Pool', image: 'https://images.unsplash.com/photo-1580041065738-e72023775cdc?w=600&q=80', category: 'Sports' },
   { title: 'Gymnasium', image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80', category: 'Fitness' },
   { title: 'Tennis Court', image: 'https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=600&q=80', category: 'Sports' },
-  { title: 'Kids Play Area', image: 'https://images.unsplash.com/photo-1587454436116-c10e5b09d88d?w=600&q=80', category: 'Recreation' },
+  { title: 'Kids Play Area', image: 'https://images.unsplash.com/photo-1596997000103-e597b3ca50df?w=600&q=80', category: 'Recreation' },
   { title: 'Yoga Deck', image: 'https://images.unsplash.com/photo-1545389336-cf090694435e?w=600&q=80', category: 'Wellness' },
   { title: 'Clubhouse', image: 'https://images.unsplash.com/photo-1582719471137-c3967ffb1c42?w=600&q=80', category: 'Social' },
   { title: 'Landscaped Gardens', image: 'https://images.unsplash.com/photo-1563714193017-5a5fb60bc02b?w=600&q=80', category: 'Nature' },
