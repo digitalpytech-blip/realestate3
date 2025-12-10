@@ -117,44 +117,56 @@ const Hero = () => {
             <p className="text-xs text-white/50 mt-4">RERA No: {projectData.rera}</p>
           </div>
 
-          {/* Right Form - Now visible on mobile too */}
+          {/* Right Form - Same on mobile and desktop */}
           <div className="w-full">
-            <Card className="bg-slate-800/90 backdrop-blur-lg border-slate-700 shadow-2xl">
+            <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-2xl">
               <CardContent className="p-6 lg:p-8">
                 <div className="text-center mb-6">
-                  <h3 className="text-xl lg:text-2xl font-bold text-white mb-2">Book a Site Visit</h3>
-                  <p className="text-sm text-slate-400">Fill the form and we'll get back to you</p>
+                  <h3 className="text-xl lg:text-2xl font-bold text-slate-900 mb-2">BOOK A SITE VISIT</h3>
                 </div>
                 <form onSubmit={handleSubmit} className="space-y-4" id="quick-enquiry">
-                  <div className="relative">
-                    <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
-                    <Input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Your Name *" className="pl-10 bg-slate-700/50 border-slate-600 text-white placeholder:text-slate-400" required />
+                  <div>
+                    <Input 
+                      type="text" 
+                      name="name" 
+                      value={formData.name} 
+                      onChange={handleInputChange} 
+                      placeholder="Your Name" 
+                      className="bg-white border-slate-300 text-slate-900 placeholder:text-slate-500" 
+                      required 
+                    />
                   </div>
-                  <div className="relative">
-                    <Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
-                    <Input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="Phone Number *" className="pl-10 bg-slate-700/50 border-slate-600 text-white placeholder:text-slate-400" required />
+                  <div>
+                    <Input 
+                      type="tel" 
+                      name="phone" 
+                      value={formData.phone} 
+                      onChange={handleInputChange} 
+                      placeholder="Mobile Number" 
+                      className="bg-white border-slate-300 text-slate-900 placeholder:text-slate-500" 
+                      required 
+                    />
                   </div>
-                  <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
-                    <Input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="Email Address" className="pl-10 bg-slate-700/50 border-slate-600 text-white placeholder:text-slate-400" />
+                  <div>
+                    <Input 
+                      type="email" 
+                      name="email" 
+                      value={formData.email} 
+                      onChange={handleInputChange} 
+                      placeholder="Your Email" 
+                      className="bg-white border-slate-300 text-slate-900 placeholder:text-slate-500" 
+                    />
                   </div>
-                  <div className="relative">
-                    <Home className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400 z-10" />
-                    <Select value={formData.unitType} onValueChange={handleSelectChange}>
-                      <SelectTrigger className="pl-10 bg-slate-700/50 border-slate-600 text-white">
-                        <SelectValue placeholder="Select Configuration" />
-                      </SelectTrigger>
-                      <SelectContent className="bg-slate-800 border-slate-700">
-                        <SelectItem value="3bhk-sq">3 BHK + SQ</SelectItem>
-                        <SelectItem value="3bhk-sq-max">3 BHK + SQ MAX</SelectItem>
-                        <SelectItem value="4bhk-sq">4 BHK + SQ</SelectItem>
-                        <SelectItem value="4bhk-sq-max">4 BHK + SQ MAX</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <Button type="submit" disabled={isSubmitting} className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-6">
+                  <Button 
+                    type="submit" 
+                    disabled={isSubmitting} 
+                    className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-6 text-base"
+                  >
                     {isSubmitting ? 'SUBMITTING...' : 'SUBMIT'}
                   </Button>
+                  <p className="text-xs text-slate-600 text-center">
+                    By submitting this form, you agree to our privacy policy
+                  </p>
                 </form>
               </CardContent>
             </Card>
