@@ -88,28 +88,6 @@ const Hero = () => {
                 <p className="text-3xl font-bold text-white">₹ 3.20 CR*</p>
               </div>
             </div>
-            <div className="hidden md:grid grid-cols-2 gap-4 mb-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <p className="text-2xl font-bold text-white">7+ Acres</p>
-                <p className="text-sm text-white/70">Premium Land</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <p className="text-2xl font-bold text-white">528 Units</p>
-                <p className="text-sm text-white/70">Exclusive Living</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <p className="text-2xl font-bold text-white">3/4 BHK</p>
-                <p className="text-sm text-white/70">Configurations</p>
-              </div>
-            </div>
-            <div className="hidden md:flex flex-col sm:flex-row gap-4 mb-4">
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-slate-900 font-bold px-6 py-4 rounded-full">
-                BOOK A SITE VISIT !
-              </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-slate-900 font-bold px-6 py-4 rounded-full">
-                QUICK ENQUIRY !
-              </Button>
-            </div>
             <p className="text-xs text-white/50 mt-4">RERA No: {projectData.rera}</p>
           </div>
 
