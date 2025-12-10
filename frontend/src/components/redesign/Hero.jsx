@@ -114,12 +114,12 @@ const Hero = () => {
             <p className="text-xs text-white/50 mt-4">RERA No: {projectData.rera}</p>
           </div>
 
-          {/* Right Form - Same on mobile and desktop */}
-          <div className="w-full">
-            <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-2xl">
+          {/* Right Form - Transparent with reduced width on desktop */}
+          <div className="w-full lg:w-3/5 lg:ml-auto">
+            <Card className="bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl">
               <CardContent className="p-6 lg:p-8">
                 <div className="text-center mb-6">
-                  <h3 className="text-xl lg:text-2xl font-bold text-slate-900 mb-2">BOOK A SITE VISIT</h3>
+                  <h3 className="text-xl lg:text-2xl font-bold text-white mb-2">BOOK A SITE VISIT</h3>
                 </div>
                 <form onSubmit={handleSubmit} className="space-y-4" id="quick-enquiry">
                   <div>
@@ -129,7 +129,7 @@ const Hero = () => {
                       value={formData.name} 
                       onChange={handleInputChange} 
                       placeholder="Your Name" 
-                      className="bg-white border-slate-300 text-slate-900 placeholder:text-slate-500" 
+                      className="bg-white/20 backdrop-blur-sm border-white/30 text-white placeholder:text-white/70" 
                       required 
                     />
                   </div>
@@ -140,7 +140,7 @@ const Hero = () => {
                       value={formData.phone} 
                       onChange={handleInputChange} 
                       placeholder="Mobile Number" 
-                      className="bg-white border-slate-300 text-slate-900 placeholder:text-slate-500" 
+                      className="bg-white/20 backdrop-blur-sm border-white/30 text-white placeholder:text-white/70" 
                       required 
                     />
                   </div>
@@ -151,7 +151,7 @@ const Hero = () => {
                       value={formData.email} 
                       onChange={handleInputChange} 
                       placeholder="Your Email" 
-                      className="bg-white border-slate-300 text-slate-900 placeholder:text-slate-500" 
+                      className="bg-white/20 backdrop-blur-sm border-white/30 text-white placeholder:text-white/70" 
                     />
                   </div>
                   <Button 
@@ -161,7 +161,7 @@ const Hero = () => {
                   >
                     {isSubmitting ? 'SUBMITTING...' : 'SUBMIT'}
                   </Button>
-                  <p className="text-xs text-slate-600 text-center">
+                  <p className="text-xs text-white/70 text-center">
                     By submitting this form, you agree to our privacy policy
                   </p>
                 </form>
