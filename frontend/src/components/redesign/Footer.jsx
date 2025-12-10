@@ -17,9 +17,9 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <img
-              src="https://customer-assets.emergentagent.com/job_3f244764-57ce-4562-8039-fea433c94dc5/artifacts/jo4653ri_CitiBricks-Logo.webp"
-              alt="CitiBricks Logo"
-              className="h-12 w-auto mb-6 brightness-0 invert"
+              src="https://customer-assets.emergentagent.com/job_pdf-landing-pro/artifacts/u7t9nq3j_project-logo%20%282%29.webp"
+              alt="Aurum Alumni Bliss"
+              className="h-12 w-auto mb-6"
             />
             <p className="text-slate-400 text-sm leading-relaxed mb-4">
               {projectData.developer} presents {projectData.name} - Transforming addresses into landmarks.
