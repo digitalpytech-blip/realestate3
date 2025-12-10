@@ -44,31 +44,41 @@ const Header = () => {
           <nav className="hidden lg:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors"
+              className={`text-sm font-medium transition-colors ${
+                scrolled ? 'text-slate-700 hover:text-slate-900' : 'text-white hover:text-white/80'
+              }`}
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection('features')}
-              className="text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors"
+              className={`text-sm font-medium transition-colors ${
+                scrolled ? 'text-slate-700 hover:text-slate-900' : 'text-white hover:text-white/80'
+              }`}
             >
               Features
             </button>
             <button
               onClick={() => scrollToSection('amenities')}
-              className="text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors"
+              className={`text-sm font-medium transition-colors ${
+                scrolled ? 'text-slate-700 hover:text-slate-900' : 'text-white hover:text-white/80'
+              }`}
             >
               Amenities
             </button>
             <button
               onClick={() => scrollToSection('location')}
-              className="text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors"
+              className={`text-sm font-medium transition-colors ${
+                scrolled ? 'text-slate-700 hover:text-slate-900' : 'text-white hover:text-white/80'
+              }`}
             >
               Location
             </button>
             <button
               onClick={() => scrollToSection('floor-plans')}
-              className="text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors"
+              className={`text-sm font-medium transition-colors ${
+                scrolled ? 'text-slate-700 hover:text-slate-900' : 'text-white hover:text-white/80'
+              }`}
             >
               Floor Plans
             </button>
@@ -76,13 +86,22 @@ const Header = () => {
 
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a href={`tel:${projectData.contact.phones[0]}`} className="flex items-center space-x-2 text-sm text-slate-700 hover:text-slate-900 transition-colors">
+            <a 
+              href={`tel:${projectData.contact.phones[0]}`} 
+              className={`flex items-center space-x-2 text-sm transition-colors ${
+                scrolled ? 'text-slate-700 hover:text-slate-900' : 'text-white hover:text-white/80'
+              }`}
+            >
               <Phone className="h-4 w-4" />
               <span>{projectData.contact.phones[0]}</span>
             </a>
             <Button
               onClick={() => scrollToSection('contact')}
-              className="bg-slate-900 hover:bg-slate-800 text-white"
+              className={`${
+                scrolled 
+                  ? 'bg-slate-900 hover:bg-slate-800 text-white' 
+                  : 'bg-white hover:bg-white/90 text-slate-900'
+              }`}
             >
               Enquire Now
             </Button>
