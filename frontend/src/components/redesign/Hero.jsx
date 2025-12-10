@@ -56,9 +56,9 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start max-w-7xl mx-auto">
           {/* Left Content */}
-          <div className="text-center lg:text-left">
+          <div className="text-left">
             <div className="inline-block mb-4">
               <span className="text-xs font-bold tracking-widest text-cyan-400 uppercase px-4 py-2 bg-cyan-400/10 rounded-full border border-cyan-400/30">
                 {projectData.developer} NEW LAUNCH
