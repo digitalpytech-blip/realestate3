@@ -85,7 +85,7 @@ const Hero = () => {
                 <p className="text-sm text-white/70">Configurations</p>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-4">
+            <div className="hidden lg:flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-4">
               <Button onClick={() => document.getElementById('quick-enquiry')?.scrollIntoView({ behavior: 'smooth' })} size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-white font-bold px-8 py-6">
                 BOOK A SITE VISIT !
               </Button>
@@ -93,7 +93,7 @@ const Hero = () => {
                 QUICK ENQUIRY !
               </Button>
             </div>
-            <Button variant="link" className="text-cyan-400 hover:text-cyan-300">
+            <Button variant="link" className="hidden lg:inline-flex text-cyan-400 hover:text-cyan-300">
               <Download className="h-4 w-4 mr-2" />
               DOWNLOAD BROCHURE
             </Button>
